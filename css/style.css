@@ -1,0 +1,103 @@
+html, 
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white; 
+    overflow: hidden;
+}
+
+.dashbord-header {
+  height: 36px;
+  padding-top: 4px;
+  padding-left: 3px;
+  padding-right: 3px;
+  min-height: 0px;
+  background-color: #4A8BC1;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+.dashbord-button {
+    padding: 1px;
+    width: 30px;
+    height: 30px;
+    border: black;
+    box-shadow: none;
+    background: transparent;
+    margin-top: 0px;
+    opacity: .95;
+    vertical-align: middle;
+    box-sizing: border-box;
+    border-radius: 2px;
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.dashbord-sidebar {
+  font-size: 20px;
+  cursor: pointer
+}
+
+.dashbord-sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #1E2023;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 35px;
+}
+
+.dashbord-sidenav > div {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    background-color: #333538;
+    border-top: 1px solid #646464;
+}
+
+.dashbord-sidenav img {
+    display: inline-block;
+    width: 25px;
+    height: inherit;
+}
+
+.dashbord-sidenav svg {
+    display: inline-block;
+    width: 25px;
+    height: inherit;
+}
+
+.dashbord-sidenav span {
+    height: auto;
+    width: 25px;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.dashbord-sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.dashbord-sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .dashbord-sidenav {padding-top: 15px;}
+  .dashbord-sidenav a {font-size: 18px;}
+}
