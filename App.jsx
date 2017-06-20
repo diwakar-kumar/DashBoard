@@ -9,15 +9,21 @@ class App extends React.Component {
          <div id="mySidenav" className="dashbord-sidenav">
             <div>
                <img src="resources/Notification.svg"></img>
-               <span>About</span>
+               <div className="dashbord-nav-name">
+                  <span>About</span>
+               </div>
             </div>
               <div>
                <img src="resources/Notification.svg"></img>
-               <span>About</span>
+               <div className="dashbord-nav-name">
+                  <span>About</span>
+               </div>
             </div>
             <div>
                <img src="resources/Notification.svg"></img>
-               <span>About</span>
+               <div className="dashbord-nav-name">
+                  <span>About</span>
+               </div>
             </div>
          </div>
       </div>
@@ -40,8 +46,11 @@ class Header extends React.Component {
 class Button extends React.Component {
    render() {
       return (
-         <button className = "btn-primary dashbord-button">
-            <img src="resources/Notification.svg"></img>
+         <button className = "btn-primary dashbord-button right">
+            <div>
+              <img src="resources/msg.svg"></img>
+              <div className="dashbord-button-notification">2</div>
+            </div>
          </button>
       )
    }
@@ -49,27 +58,26 @@ class Button extends React.Component {
 
 class SideBar extends React.Component {
   openNav() {
-     var obj = document.getElementById("mySidenav");
+      var obj = $("#mySidenav");
      if(obj)
      {
-         obj.style.display = 'block';
+         obj.show("slow");
      }
   }
 
   closeNav() {
-     var obj = document.getElementById("mySidenav");
+     var obj = $("#mySidenav");
      if(obj)
      {
-         obj.style.display = 'none';
+         obj.hide("slow");
      }
   }
 
   toggleNav() {
-     var obj = document.getElementById("mySidenav");
-     if(obj.style.display === 'none') {
-         obj.style.display = 'block';
-     } else {
-         obj.style.display = 'none';
+     var obj = $("#mySidenav .dashbord-nav-name");
+     if(obj)
+     {
+         obj.toggle("slow");;
      }
   }
 

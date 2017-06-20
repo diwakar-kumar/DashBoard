@@ -10,9 +10,7 @@ body {
 
 .dashbord-header {
   height: 36px;
-  padding-top: 4px;
-  padding-left: 3px;
-  padding-right: 3px;
+  padding: 4px;
   min-height: 0px;
   background-color: #4A8BC1;
   background-image: none;
@@ -24,7 +22,7 @@ body {
 .dashbord-button {
     padding: 1px;
     width: 30px;
-    height: 30px;
+    height: 100%;
     border: black;
     box-shadow: none;
     background: transparent;
@@ -37,6 +35,36 @@ body {
     margin-bottom: 0;
 }
 
+.dashbord-button > div {
+    position: relative;
+}
+
+.dashbord-button .dashbord-button-notification {
+    position: absolute;
+    top: -7px;
+    right: 0px;
+    background-color: #f00;
+    width: 15px;
+    height: 15px;
+    color: #fff;
+    border-radius: 20px -moz-border-radius:20px;
+    -webkit-border-radius: 20px;
+    text-align: center;
+    border: 2px solid #fff;
+    font-size: 10px;
+    line-height: 10px;
+}
+
+.right {
+  float: right;
+  right : 0;
+}
+
+.left {
+  float: left;
+  left : 0;
+}
+
 .dashbord-sidebar {
   font-size: 20px;
   cursor: pointer
@@ -44,15 +72,12 @@ body {
 
 .dashbord-sidenav {
     height: 100%;
-    width: 250px;
+    width: auto;
     position: fixed;
     z-index: 1;
-    top: 0;
-    right: 0;
+    top: 35px;
     background-color: #1E2023;
     overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 35px;
 }
 
 .dashbord-sidenav > div {
@@ -72,17 +97,12 @@ body {
     height: inherit;
 }
 
-.dashbord-sidenav svg {
-    display: inline-block;
-    width: 25px;
-    height: inherit;
-}
-
-.dashbord-sidenav span {
+.dashbord-sidenav .dashbord-nav-name {
     height: auto;
-    width: 25px;
+    width: 150px;
     vertical-align: middle;
     margin-left: 8px;
+    display: inline-block;
 }
 
 .dashbord-sidenav a:hover, .offcanvas a:focus{
