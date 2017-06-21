@@ -1,0 +1,27 @@
+{
+  parser: "babel-eslint",
+  "plugins": [
+    "react"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+        "jsx": true,
+        "experimentalObjectRestSpread": true,
+        "modules": true 
+    }
+  },
+  "rules": {
+  	"max-len": [1, 120, 2, {ignoreComments: true}],
+  	"no-unused-vars": [2, {"vars": "local", "args": "after-used"}],
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "document": false
+  },
+  "extends": ["airbnb-base"]
+}
