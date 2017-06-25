@@ -1,13 +1,13 @@
 import React from 'react';
-import { Button } from '../components';
+import { ButtonPanel } from '../components';
 
 class Main extends React.Component {
-	handleClick(){
+	handleClick(buttonName){
     	alert("My First Component");
   	}
     render() {
       return (
-        <Button name="SampleButton" clickHandler={this.handleClick}/>
+        <ButtonPanel clickHandler={this.handleClick}/>
       );
     }
 }

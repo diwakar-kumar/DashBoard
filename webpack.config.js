@@ -34,24 +34,24 @@ module.exports = {
     },
     {
       test: /\.css$/,
-      loader: "style-loader!css-loader"
+      loader: "style-loader!css-loader!autoprefixer-loader"
     },
     {
       test: /\.woff(2)?(\?v=[0-9].[0-9].[0-9])?$/,
       loader: "url-loader?mimetype=application/font-woff"
     },
-    {
+   /* {
       test: /\.(ttf|eot|svg)(\?v=[0-9].[0-9].[0-9])?$/,
       loader: "file-loader?name=[name].[ext]"
-    },
+    },*/
     {
-      test: /\.(jpg|png)$/,
-      loader: 'file?name=[path][name].[hash].[ext]'
+      test: /\.(png|jpg|gif|svg)$/,
+      loader: 'file-loader?name=[path][name].[hash].[ext]'
     },
-    {
+    /*{
       test: /\.svg$/,
-      loader: 'babel!svg-react'
-    },
+      loader: 'babel-loader!svg-react-loader'
+    },*/
     {
       test: /\.json$/,
       loader: 'json'

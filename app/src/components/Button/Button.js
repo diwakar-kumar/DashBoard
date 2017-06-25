@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import cssModules from 'react-css-modules';
 import styles from './Button.module.scss';
+var msgImage  = require('../../../resources/msg.svg')
 
 class Button extends Component {
   constructor(props) {
@@ -17,7 +18,6 @@ class Button extends Component {
     <button className = {styles.btn} id={`button-item-${this.props.name}`} onClick={this.handleClick}>
         <div>
           <img src={msgImage}></img>
-          <div className= {styles.btn_notification} >2</div>
         </div>
      </button>
     )

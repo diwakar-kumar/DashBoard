@@ -5,7 +5,9 @@
 // import { MyComponent } from '../components';
 
 import Button from './Button/Button';
+import ButtonPanel from './ButtonPanel/ButtonPanel';
 
 export {
-  Button
+  Button,
+  ButtonPanel
 };
