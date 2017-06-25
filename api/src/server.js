@@ -1,0 +1,9 @@
+const koa = require('koa');
+
+const app = new koa();
+
+app.use(function* () {
+    this.body = 'Hello from koajs';
+});
+
+app.listen(3000);

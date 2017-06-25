@@ -1,5 +1,6 @@
 {
   parser: "babel-eslint",
+  "extends": ["airbnb"],
   "plugins": [
     "react"
   ],
@@ -8,20 +9,31 @@
     "sourceType": "module",
     "ecmaFeatures": {
         "jsx": true,
-        "experimentalObjectRestSpread": true,
+        "impliedstrict" : true,
+        "experimentalObjectRestSpread" : true,
         "modules": true 
     }
   },
   "rules": {
-  	"max-len": [1, 120, 2, {ignoreComments: true}],
-  	"no-unused-vars": [2, {"vars": "local", "args": "after-used"}],
+    "max-len": [1, 120, 2, {ignoreComments: true}],
+    "id-length": 0,
+    "indent": [1, 4],
+    "no-console": 0,
+    "no-unused-vars": [1, {"vars": "local", "args": "none"}],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/prefer-stateless-function": [0, { "ignorePureComponents": <ignorePureComponents> }],
+    "strict": 0,
   },
   "env": {
     "browser": true,
-    "node": true
+    "es6": true,
+    "node": true,
+    "mocha": true
   },
   "globals": {
     "document": false
   },
-  "extends": ["airbnb-base"]
+  "settings": {
+      "import/resolver": { "airbnb": {"extensions": [".js", ".jsx"]} },
+    }
 }

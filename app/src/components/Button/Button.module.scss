@@ -1,0 +1,46 @@
+.dashbord-button {
+    padding: 1px;
+    width: 30px;
+    height: 100%;
+    border: black;
+    box-shadow: none;
+    background: transparent;
+    margin-top: 0px;
+    opacity: .95;
+    vertical-align: middle;
+    box-sizing: border-box;
+    border-radius: 2px;
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.dashbord-button > div {
+    position: relative;
+}
+
+.dashbord-button .dashbord-button-notification {
+    position: absolute;
+    top: -7px;
+    right: 0px;
+    background-color: #f00;
+    width: 15px;
+    height: 15px;
+    color: #fff;
+    border-radius: 20px;
+    -moz-border-radius:20px;
+    -webkit-border-radius: 20px;
+    text-align: center;
+    border: 2px solid #fff;
+    font-size: 10px;
+    line-height: 10px;
+}
+
+.right {
+  float: right;
+  right : 0;
+}
+
+.left {
+  float: left;
+  left : 0;
+}
