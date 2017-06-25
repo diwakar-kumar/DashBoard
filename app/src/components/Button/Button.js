@@ -1,17 +1,31 @@
 import React, { Component } from 'react';
-import './Button.module.scss';
+import cssModules from 'react-css-modules';
+import styles from './Button.module.scss';
 
 class Button extends Component {
+  constructor(props) {
+    super();
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(){
+    this.props.clickHandler(this.props.name);
+  }
+
   render() {
   	return (
-    <button className = "btn-primary dashbord-button right">
+    <button className = {styles.btn} id={`button-item-${this.props.name}`} onClick={this.handleClick}>
         <div>
-          <img src="app/resources/msg.svg"></img>
-          <div className="dashbord-button-notification">2</div>
+          <img src={msgImage}></img>
+          <div className= {styles.btn_notification} >2</div>
         </div>
      </button>
     )
   }
 }
 
-export default Button; // Don’t forget to use export default!	
+Button.propTypes = {
+  name: React.PropTypes.string,
+  clickHandler: React.PropTypes.func,
+};
+export default cssModules(Button, styles);// Don’t forget to use export default! 

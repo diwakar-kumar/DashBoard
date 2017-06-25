@@ -1,4 +1,4 @@
-.dashbord-button {
+.btn {
     padding: 1px;
     width: 30px;
     height: 100%;
@@ -14,11 +14,7 @@
     margin-bottom: 0;
 }
 
-.dashbord-button > div {
-    position: relative;
-}
-
-.dashbord-button .dashbord-button-notification {
+.btn_notification {
     position: absolute;
     top: -7px;
     right: 0px;
