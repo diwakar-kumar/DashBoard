@@ -8,7 +8,7 @@
     "test:watch": "npm run test -- --watch",
     "webserver": "node api/src/server.js",
     "build": "`npm bin`/webpack",
-    "dev": "`npm bin`/webpack-dev-server",
+    "dev": "webpack-dev-server --hot",
     "lint": "`npm bin`/eslint . --ext .js --ext .jsx --fix",
     "deploy": "NODE_ENV=production `npm bin`/webpack -p",
     "start": "npm run dev",
