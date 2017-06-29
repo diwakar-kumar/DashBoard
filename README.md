@@ -1,80 +1,46 @@
 # DashBoard
 
- ## Docs ( Good Article to understand what's what.)
- 1. [Detailed blogpost on how was our project built](http://blog.joanboixados.com/building-a-boilerplate-for-a-koa-redux-react-application-including-webpack-mocha-and-sass/)
- 2. [Second Source against inspiration of our project](https://github.com/RyanCCollins/react-redux-simple-starter)
- 2. [How to Use npm as a Build Tool](https://www.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/)
- 3. [How to set up the project](https://www.robinwieruch.de/react-eslint-webpack-babel/)
- 4. [Fix Elint Error using this link](https://stackoverflow.com/questions/44531243/eslint-module-build-failed-error-with-eslint-config-airbnb)
+##Project Structure
 
- # Documentation
+We can make this more granular over time, and move things around as we see fit, but let’s go over what’s here.
 
-## Getting Started
-To try the example application out or to use the project, follow the instructions below.
+1. **src/api** - We’ll probably need to make calls to a backend API at some point. Put all that code here.– like userApi.js, productApi.js, etc.
 
-1. **Clone repo**
+2. **src/components** - All pour Presentational (aka Dumb) components go here. These are the simple stateless ones that just take props.
 
-    git clone https://github.com/Dheeraj-Karki/DashBoard.git
+3. **src/containers** - The Container components go here. These are the stateful ones, and the ones that make the API calls. If you’re using Redux, these are the ones that are connected to the store. Notice that CSS and tests are in the same folder as their respective components.
 
-2. **Install dependencies**
+4. **src/resources** - Put the images and other resources in one place to start with.
 
-    npm run setup
+5. **src/index.js** - This is where we initialize the app and call ReactDOM.render, so it makes sense to keep this at the top level.
 
-3. **Run development server**
+6. **src/utils** - We’ll probably end up with miscellaneous utility functions – error handlers, formatters, and the like. We’ll usually put them in a file inside utils so we can access them easily.
 
-   npm run start
+7. **package.json** - This file holds various metadata relevant to the project. The version field is used by npm to make sure the right version of the package is being installed.
 
-   Development server should be running at http://localhost:8080/
+8. **.gitignore** - Git uses it to determine which files and directories to ignore, before you make a commit. A .gitignore file should be committed into your repository, in order to share the ignore rules with any other users that clone the repository.
 
-4. **Make build**
+9. **.gitkeep** - Git cannot add a completely empty directory. So if we want to track empty directories in Git have created the convention of putting files called “.gitkeep” in these directories. The file could be called anything; Git assigns no special significance to this name.
 
-   npm run build
+##Important Article
+
+ 1. [Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
+ 2. [Example](https://gist.github.com/chantastic/fc9e3853464dffdb1e3c)
+ 3. [Every Post Ever](https://daveceddia.com/archives/)
 
 ##Instruction
 
-1. *Install webpack webpack-dev-serv globally so you can use these module globally.
-> 	npm install -g webpack webpack-dev-server
+###Install webpack webpack-dev-serv globally so you can use these module globally.
+> npm install -g webpack webpack-dev-server
 
-#How to Install all dependency
+###How to Install all dependency
 We are using package.json, which will take care of all dependency. Just fire below command to install those dependency.
->npm install // Use sudo if need sdmin permission to install
+> npm install // Use sudo if need sdmin permission to install
 
-#How to add dependency package on package.json
+###How to add dependency package on package.json
 Please add your dependency on package.json, whenever you use any package. So that new developer will use your code and don't get compile error. Use below command to add
 > npm install {your-Package-name} -save // this command will install your package and save the entry on package.json
 
-#How to add Dev-dependency package on package.json
+###How to add Dev-dependency package on package.json
 Please add your dependency on package.json, whenever you use any package. So that new developer will use your code and don't get compile error. Use below command to add
-> npm install {your-Package-name} --save-dev // this command will install your package and save the entry on package.json
-
-## Technologies / Libraries
-
-- [Node](https://nodejs.org/en/) - JS runtime environment
-- [npm](https://www.npmjs.com/) - package manager
-- [Babel](https://babeljs.io/) - ES6 transpiler
-- [Webpack](https://webpack.github.io/) - module bundler & task runner
-- [React](https://facebook.github.io/react/) - interfaces
-- [react-hot-loader](https://github.com/gaearon/react-hot-loader) - hot reloading for react
-- [react-router](https://github.com/rackt/react-router) - react application router
-- [react-redux](https://github.com/rackt/react-redux) - react bindings for redux
-- [react-css-modules](https://github.com/gajus/react-css-modules) - React CSS Modules implement automatic mapping of CSS modules.
-- [react-foundation](https://github.com/nordsoftware/react-foundation) - Foundation React components, use or don't use.
-- [Immutable](https://github.com/facebook/immutable-js) - data structures
-- [Redux](https://github.com/rackt/redux) - awesome flux architecture
-- [Redux Form](https://github.com/erikras/redux-form)- works with React Redux to enable an html form in React to use Redux to store all of its state.
-- [redux-thunk](https://github.com/gaearon/redux-thunk) - thunk middleware for redux
-- [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch) - API fetch network requests
-- [redux-devtools](https://github.com/gaearon/redux-devtools) - redux development tool
-- [SASS](http://sass-lang.com/) - styles
-- [ESLint](http://eslint.org/) - linter
-- [Mocha](http://mochajs.org/) - unit tests
-- [jsdom](https://github.com/tmpvar/jsdom) - vdom to test React without browser
-- [Expect](https://github.com/mjackson/expect) - assertion library
-- [Chai / Immutable](http://chaijs.com/) - assertion library for Immutable JS
-- A bunch of useful scripts
-
-### Acknowledgements
-
-This project is loosely based on: [This boilerplate](https://github.com/mezod/boilerplate-koa-redux-react).
-
-Thank you to @mezod for their hard work and inspiration.
+> npm install {your-Package-name} --save-dev // this command will install your package and save the entry on  package.json
