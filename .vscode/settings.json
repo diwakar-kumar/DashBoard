@@ -1,0 +1,40 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    //window setting
+    "workbench.sideBar.location": "left",
+    "window.menuBarVisibility": "default",
+
+    //eslint setting
+    "eslint.enable": true,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact"
+    ],
+    "eslint.autoFixOnSave": true,
+
+    //editor setting
+    "editor.lineNumbers": "on",
+
+    //file setting
+    "files.autoSave": "off",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true
+    },
+    "files.eol": "\n",
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/*/**": true
+    },
+
+    //css validator setting
+    "css.validate": true,
+    "css.colorDecorators.enable": true,
+    "css.lint.duplicateProperties": "error",
+    "css.lint.emptyRules": "error",
+    "css.lint.unknownProperties": "error"
+}

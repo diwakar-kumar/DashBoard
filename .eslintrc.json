@@ -1,0 +1,34 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "node": true
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "rules": {
+        //Refre to add more rules http://eslint.org/docs/rules/
+        "no-const-assign": "warn",
+        "no-this-before-super": "warn",
+        "no-undef": "warn",
+        "no-unreachable": "warn",
+        "no-unused-vars": "warn",
+        "constructor-super": "warn",
+        "valid-typeof": "warn",
+        "no-cond-assign": "error",
+        "no-empty": "warn",
+        "curly": "error",
+        "block-scoped-var": "error",
+        "no-magic-numbers": "warn",
+        "no-empty-function": "error",
+        "strict": "error",
+        "comma-spacing": "warn",
+        "capitalized-comments": "warn",
+        "no-tabs": "warn"
+    }
+}
