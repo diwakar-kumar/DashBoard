@@ -22,6 +22,10 @@ We can make this more granular over time, and move things around as we see fit, 
 
 * **.gitkeep** - Git cannot add a completely empty directory. So if we want to track empty directories in Git have created the convention of putting files called “.gitkeep” in these directories. The file could be called anything; Git assigns no special significance to this name.
 
+* **.eslint.json** - ESLint is an open source JavaScript linting utility originally created by Nicholas C. Zakas in June 2013. Code linting is a type of static analysis that is frequently used to find problematic patterns or code that doesn't adhere to certain style guidelines. Please add global rules here.
+
+* **.vscode/settings.json** - Provides entry to configure user and workspace settings. You are provided with a list of Default Settings. Copy any setting that you want to change to the appropriate settings.json file.
+
 ## Important Article
 
  - [Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
