@@ -6,10 +6,10 @@
     "type": "git",
     "url": "https://github.com/Dheeraj-Karki/DashBoard.git"
   },
-  "main": "src/index.js",
+  "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/index.js"
+    "start": "nodemon src/app.js"
   },
   "author": "Dheeraj Karki",
   "license": "ISC",
